@@ -22,7 +22,7 @@ def rename_file(file_path:str, dryrun=False):
 
 
 def rename_dir_files(dir_path:str, dryrun=False):
-    files = os.listdir(os.path.abspath(dir_path))
+    files = [dir_path + path for path in os.listdir(os.path.abspath(dir_path))]
     for file in files:
         prev_file = os.path.abspath(file)
         rename_file(prev_file, dryrun)        
