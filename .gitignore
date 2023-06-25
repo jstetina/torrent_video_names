@@ -52,3 +52,4 @@ testing*
 *.swp
 *.~lock.*
 *~
+__pycache__/
