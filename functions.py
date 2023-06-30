@@ -1,7 +1,7 @@
 import re
 
-from patterns import STOP_PATTERNS
-from extensions import VIDEO_EXTENSIONS
+from torrent_video_names.patterns import STOP_PATTERNS
+from torrent_video_names.extensions import VIDEO_EXTENSIONS
 
 def rename(file:str):
     file_name = " ".join(file.split(".")[:-1])
