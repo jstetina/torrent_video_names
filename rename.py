@@ -4,7 +4,7 @@ import os
 
 from torrent_video_names.functions import rename
 
-def rename_file(file_path:str, dryrun=False):
+def rename_file(file_path:str, dryrun=False) -> str:
     prev_file = os.path.abspath(file_path)
 
     if not (os.path.exists(prev_file) or dryrun):
@@ -19,6 +19,7 @@ def rename_file(file_path:str, dryrun=False):
         print("OLD:", os.path.basename(prev_file))
         print("NEW:", os.path.basename(new_file))
 
+    return new_file
 
 def rename_dir_files(dir_path:str, dryrun=False):
     files = [dir_path + path for path in os.listdir(os.path.abspath(dir_path))]
